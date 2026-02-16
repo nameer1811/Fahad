@@ -1,24 +1,24 @@
 import React from "react";
-import Header from "./components/header/Header.jsx";
-import Nav from "./components/nav/Nav.jsx";
-import About from "./components/about/About.jsx";
-import Experience from "./components/experience/Experience.jsx";
-// import Expertise from "./components/expertise/expertise.jsx";
-import Projects from "./components/projects/Projects.jsx";
-// import Recommendations from "./components/recommendations/Recommendations";
-import Contact from "./components/contact/Contact.jsx";
-import Footer from "./components/footer/Footer.jsx";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import MatrixBackground from "./components/MatrixBackground";
 
 const App = () => {
+  const [showNav, setShowNav] = React.useState(false);
+
   return (
     <>
-      <Header />
-      <Nav />
+      <MatrixBackground onComplete={() => setShowNav(true)} />
+      <Header startTyping={showNav} />
+      {showNav && <Nav />}
       <About />
       <Experience />
-      {/* <Expertise /> */}
       <Projects />
-      {/* <Recommendations /> */}
       <Contact />
       <Footer />
     </>
