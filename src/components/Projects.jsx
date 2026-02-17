@@ -56,10 +56,13 @@ const data = [
 const Projects = () => {
     return (
         <section id="projects" className="pt-20 pb-20 min-h-screen flex flex-col justify-center">
-            <div className="flex items-center justify-center gap-4 mb-12 w-full">
-                <div className="h-[1px] bg-gradient-to-r from-transparent to-white/20 w-1/6 md:w-1/4"></div>
-                <h2 className="text-3xl font-bold text-light font-mono">projects</h2>
-                <div className="h-[1px] bg-gradient-to-r from-white/20 to-transparent w-1/6 md:w-1/4"></div>
+            <div className="flex flex-col items-center justify-center mb-12 w-full">
+                <div className="flex items-center justify-center gap-4 w-full">
+                    <div className="h-[1px] bg-gradient-to-r from-transparent to-white/20 w-1/6 md:w-1/4"></div>
+                    <h2 className="text-3xl font-bold text-light font-mono">projects</h2>
+                    <div className="h-[1px] bg-gradient-to-r from-white/20 to-transparent w-1/6 md:w-1/4"></div>
+                </div>
+                <p className="text-light/40 text-xs mt-2 italic font-mono uppercase tracking-widest">(seems like i don't do data engineering out of work :/)</p>
             </div>
 
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
